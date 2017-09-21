@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="@color/colorBg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Mob短信注册"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/colorWhite"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/colorWhite"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_margin="10dip"
+        android:addStatesFromChildren="true"
+        android:background="@drawable/bg_edittext_selector"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="手机号："
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/register_et_phone"
+            android:layout_width="0.0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:gravity="center_vertical"
+            android:background="@null"
+            android:inputType="phone"
+            android:digits="0123456789"
+            android:textSize="16sp"
+            android:hint="您的手机号码" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50.0dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:addStatesFromChildren="true"
+        android:background="@drawable/bg_edittext_selector"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="密　码："
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/register_et_pwd"
+            android:layout_width="0.0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:gravity="center_vertical"
+            android:background="@null"
+            android:textSize="16sp"
+            android:password="true"
+            android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:hint="填写密码" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_margin="10dp"
+        android:addStatesFromChildren="true"
+        android:background="@drawable/bg_edittext_selector"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="验证码："
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/register_et_code"
+            android:layout_width="0.0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:gravity="center_vertical"
+            android:background="@null"
+            android:textSize="16sp"
+            android:hint="输入验证码" />
+
+        <!--<TextView
+            android:id="@+id/register_tv_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center"
+            android:text="获取验证码"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp"
+            android:background="@drawable/shape_btn_bg"/>-->
+
+        <com.shiran.mobsmsdemo.CustomCodeButton
+            android:id="@+id/register_btn_code"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center"
+            android:background="@drawable/shape_btn_bg"
+            android:text="获取验证码"
+            android:textSize="12sp"
+            android:textColor="@color/colorWhite"
+            app:vcb_afterCountdownText="重新获取"
+            app:vcb_clickAfterBackground="@drawable/bg_button_code_click_after"
+            app:vcb_countdownTime="60" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/register_btn_submit"
+        android:layout_width="match_parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="45dp"
+        android:background="@drawable/shape_btn_bg"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp"
+        android:text="注册" />
+
+</LinearLayout>
